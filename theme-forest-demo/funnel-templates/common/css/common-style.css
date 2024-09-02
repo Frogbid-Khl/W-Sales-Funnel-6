@@ -1,0 +1,837 @@
+/* Custom Style */
+
+@import url('../../../../css2');
+@import url('../../../../css2-1');
+@import url('../../../../css2-2');
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+    padding: 0;
+    color: #3c3c3c;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.layout {
+    max-width: 1470px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/*========================================== Text Color ===========================================*/
+
+.text-yellow {
+    color: #feef8b;
+}
+
+.text-blue {
+    color: #4bcbff;
+}
+
+.text-red {
+    color: #ff1100;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+
+/*========================================== Banner Strat ===========================================*/
+
+.bannerDemoDisplay .layout {
+    max-width: 1000px;
+    z-index: 2;
+    position: relative;
+}
+
+.bannerDemoDisplay {
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding: 100px 0;
+    background: url(../images/banner.jpg) no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+#color-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #22485d;
+    opacity: 0.8;
+}
+
+.bannerDemoDisplay h1 {
+    display: inline-block;
+    font-size: 60px;
+    line-height: 1.2;
+    font-weight: 800;
+    margin-bottom: 20px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.bannerDemoDisplay h2 {
+    font-size: 28px;
+    line-height: 1.5;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.bannerDemoDisplay .btn {
+    font-size: 34px;
+    color: #fff;
+    background-color: #ff1100;
+    border-radius: 5px;
+    border: 1px solid #aa0b00;
+    border-bottom: 5px solid #aa0b00;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    display: inline-block;
+    padding: 15px 10px 20px;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1;
+    text-transform: uppercase;
+    width: 340px;
+    position: relative;
+}
+
+.bannerDemoDisplay .btn:hover {
+    border-color: #fff;
+    background: none;
+    transition: 0.5s ease;
+    color: #fff;
+}
+
+@media only screen and (max-width: 1023px) {
+    .bannerDemoDisplay h1 {
+        font-size: 57px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .bannerDemoDisplay {
+        padding: 80px 0;
+    }
+    .bannerDemoDisplay h1 {
+        font-size: 44px;
+    }
+    .bannerDemoDisplay h2 {
+        font-size: 26px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .bannerDemoDisplay {
+        padding: 60px 0;
+    }
+    .bannerDemoDisplay h1 {
+        font-size: 30px;
+    }
+    .bannerDemoDisplay h2 {
+        font-size: 20px;
+    }
+    .bannerDemoDisplay .btn {
+        width: 260px;
+        font-size: 30px;
+    }
+    .bannerDemoDisplay .btn-outer .arrow {
+        display: none;
+    }
+}
+
+
+/*========================================== Banner End ===========================================*/
+
+
+/*========================================== 100% Satisfaction Guaranty Strat ===========================================*/
+
+.guarant-section {
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding: 100px 0;
+    background: url(../images/banner.jpg) no-repeat center center;
+    background-size: cover;
+    position: relative;
+    /*  */
+
+    display: none;
+
+    /*  */
+
+}
+
+.guarant-section .layout {
+    max-width: 1000px;
+    z-index: 2;
+    position: relative;
+}
+
+.guarant-section .wrapper {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.guarant-section .satisfied {
+    border: 4px dotted #fff;
+    text-align: center;
+    padding: 30px 15px;
+    margin-bottom: 10px;
+    background-color: rgba(18, 52, 73, .3);
+}
+
+.guarant-section .satisfied h2 {
+    font-size: 55px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Oswald', sans-serif;
+    padding-bottom: 10px;
+    display: block;
+    line-height: 1.2;
+}
+
+.guarant-section .satisfied p {
+    font-weight: 700;
+    color: #fff;
+    font-size: 23px;
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.5;
+}
+
+.btn-outer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.btn-outer .arrow img {
+    width: 100px;
+}
+
+.btn-outer .btn-container {
+    padding: 0 25px;
+    margin-top: 15px;
+}
+
+.guarant-section .btn {
+    font-size: 30px;
+    color: #fff;
+    background-color: #ff1100;
+    border-radius: 5px;
+    border: 1px solid #aa0b00;
+    border-bottom: 5px solid #aa0b00;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    display: block;
+    padding: 15px 45px 10px 45px;
+    padding: 15px 60px 10px 60px;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.guarant-section .btn span {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    font-style: normal;
+    font-family: 'Nunito', sans-serif;
+    padding-top: 10px;
+    text-transform: capitalize;
+}
+
+.guarant-section .btn:hover {
+    border-color: #fff;
+    background: none;
+    transition: 0.5s ease;
+    color: #fff;
+}
+
+@media only screen and (max-width: 991px) {
+    .guarant-section {
+        padding: 80px 0;
+    }
+    .guarant-section .satisfied h2 {
+        font-size: 48px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .guarant-section {
+        padding: 60px 0;
+    }
+    .guarant-section .btn-outer .arrow {
+        display: none;
+    }
+    .btn-outer .btn-container {
+        padding: 0 0;
+    }
+    .guarant-section .wrapper {
+        padding: 0 0;
+    }
+    .guarant-section .btn {
+        font-size: 20px;
+    }
+    .guarant-section .satisfied h2 {
+        font-size: 34px;
+    }
+    .guarant-section .satisfied p {
+        font-size: 18px;
+    }
+    .guarant-section .satisfied {
+        padding: 15px 15px;
+    }
+}
+
+
+/*========================================== 100% Satisfaction Guaranty End ===========================================*/
+
+
+/*========================================== Rate Us Strat ===========================================*/
+
+.rate-us {
+    float: left;
+    width: 100%;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.rate-us ul li {
+    display: inline-block;
+    padding: 0 3px;
+}
+
+.rate-us ul li:first-child {
+    padding-left: 0;
+}
+
+.rate-us ul li:last-child {
+    padding-right: 0;
+}
+
+.rate-us li img {
+    max-width: 30px;
+}
+
+.rate-us .title {
+    max-width: 875px;
+    margin: 0 auto;
+}
+
+.rate-us .title h2 {
+    font-size: 45px;
+    line-height: 1.2;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    margin: 10px 0 10px;
+}
+
+.rate-us .title p {
+    font-size: 26px;
+    line-height: 1.5;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.rate-us .title h3 {
+    font-size: 50px;
+    line-height: 1.2;
+    font-family: 'Caveat', cursive;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 991px) {
+    .rate-us .title h2 {
+        font-size: 38px;
+    }
+    .rate-us .title p {
+        font-size: 18px;
+        padding: 0 10px;
+    }
+    .rate-us .title h3 {
+        font-size: 45px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .rate-us {
+        padding: 40px 0;
+    }
+    .rate-us .title h2 {
+        font-size: 32px;
+    }
+    .rate-us .title h3 {
+        font-size: 35px;
+    }
+    .rate-us li img {
+        max-width: 22px;
+    }
+}
+
+
+/*========================================== Rate Us End ===========================================*/
+
+
+/*========================================== Footer Start ===========================================*/
+
+footer {
+    float: left;
+    width: 100%;
+    text-align: center;
+    border-top: #d5d5d5 solid 1px;
+    padding: 20px 0;
+}
+
+footer p {
+    color: #8e8d8d;
+    font-size: 15px;
+    line-height: 1;
+}
+
+@media only screen and (max-width: 767px) {
+    footer p {
+        font-size: 14px;
+    }
+}
+
+
+/*========================================== Footer End ===========================================*/
+
+
+/* Features Section */
+
+.features_Section {
+    float: left;
+    width: 100%;
+    padding-bottom: 50px;
+    padding-top: 75px;
+    background-color: #e5f9ff;
+}
+
+.features_Section .layout {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.features_Section .title {
+    text-align: center;
+    padding: 0 70px;
+}
+
+.features_Section .title h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    display: block;
+    line-height: 1.2;
+}
+
+.features_Section .title p {
+    font-size: 20px;
+    padding: 0 90px;
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+.features_Section .title p strong {
+    text-decoration: underline;
+}
+
+.features_Section ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.features_Section ul li {
+    width: 25%;
+    text-align: center;
+    padding: 0 15px;
+    margin-bottom: 30px;
+    list-style: none;
+}
+
+.features_Section ul li .item {
+    height: 100%;
+    background-color: #fff;
+    border: 1px solid #bde3f3;
+    padding: 25px 15px;
+    box-shadow: 0 0 20px #dedede;
+}
+
+.features_Section ul li img {
+    height: 110px;
+}
+
+.features_Section ul li h2 {
+    font-size: 18px;
+    margin-top: 15px;
+    font-weight: 800;
+    font-family: 'Nunito', sans-serif;
+}
+
+@media only screen and (max-width: 1279px) {
+    .features_Section .title h2 {
+        font-size: 38px;
+    }
+    .features_Section .title p {
+        font-size: 18px;
+        padding: 0 50px;
+    }
+    .features_Section ul li h2 {
+        font-size: 17px;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .features_Section .title {
+        padding: 0 30px;
+    }
+    .features_Section .title h2 {
+        font-size: 30px;
+    }
+    .features_Section .title p {
+        padding: 0;
+    }
+    .features_Section ul li {
+        width: 50%;
+    }
+    .features_Section {
+        padding-bottom: 30px;
+        padding-top: 55px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .features_Section .title {
+        padding: 0;
+    }
+    .features_Section .title h2 {
+        font-size: 28px;
+    }
+    .features_Section .title h2::after {
+        width: 220px;
+    }
+    .features_Section ul {
+        margin-top: 35px;
+    }
+    .features_Section ul li {
+        width: 100%;
+    }
+}
+
+
+/*================================== Product Section ============================================*/
+
+.our-products {
+    float: left;
+    width: 100%;
+}
+
+.our-products .BGColor_white {
+    background-color: #ffffff;
+    float: left;
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    position: relative;
+}
+
+.BGColor_lightBlue {
+    background-color: #e5f9ff;
+    float: left;
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    position: relative;
+}
+
+.products .title {
+    margin: 0 auto;
+    max-width: 750px;
+    text-align: center;
+    padding-bottom: 45px;
+}
+
+.products .title h2 {
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.products .title p {
+    font-size: 20px;
+    /* padding: 0 90px; */
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.products ul {
+    float: left;
+    width: 100%;
+    list-style: none;
+}
+
+.products ul li {
+    float: left;
+    width: 25%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.products ul li h3 {
+    font-size: 22px;
+    line-height: 1.2;
+    color: #3c3c3c;
+    font-weight: bold;
+}
+
+.products ul li img {
+    width: 100%;
+    border: 1px solid #ececec;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 15px;
+}
+
+.demo_title {
+    position: absolute;
+    top: 50%;
+    left: -90px;
+    transform: rotate(-90deg);
+    text-transform: uppercase;
+    color: #000000;
+    font-size: 115px;
+    line-height: 1;
+    font-weight: 900;
+    opacity: .1;
+}
+
+
+/* .demo_title h2{
+	color: #000000;
+	font-size: 115px;
+	line-height: 1;
+	font-weight: 900;
+	opacity: .1;
+} */
+
+.products ul li figure,
+.products ul li a {
+    line-height: 0;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (max-width: 1600px) {
+    .our-products .layout {
+        padding: 0 120px;
+    }
+    .demo_title {
+        font-size: 80px;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .our-products .layout {
+        padding: 0 100px;
+    }
+    .demo_title {
+        font-size: 75px;
+    }
+}
+
+@media only screen and (max-width: 1279px) {
+    .our-products .layout {
+        padding: 0 60px;
+    }
+    .demo_title {
+        font-size: 65px;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .products ul li {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .our-products .BGColor_white,
+    .BGColor_lightBlue {
+        padding-top: 60px;
+        padding-bottom: 10px;
+    }
+    .our-products .layout {
+        padding: 0 15px;
+    }
+    .demo_title {
+        transform: rotate(0);
+        top: 35px;
+        left: 50%;
+        margin-left: -55px;
+        font-size: 28px;
+    }
+    .products .title h2 {
+        font-size: 28px;
+    }
+    .products .title p {
+        font-size: 18px;
+    }
+    .products ul li h3 {
+        font-size: 20px;
+    }
+    .products ul li {
+        width: 100%;
+    }
+    .product-box {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+}
+/*================================== HTML Template for Single Sell ============================================*/
+.prodVarSection {
+	background: #004c7d;
+	padding: 25px 0;
+	position: fixed;
+	left: 0;
+	right: 0;
+	width: 100%;
+	bottom: 0;
+	bottom: -300px;
+	z-index: 2;
+	box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+	transition: ease all 0.3s;
+	display:none !important;
+}
+.prodVarSection.active {
+	bottom: 0;
+	
+	transition: ease all 0.3s;
+	display:block !important;
+}
+.prodVarSection .closeIcon {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 40px;
+	height: 40px;
+	background: rgba(0, 0, 0, 0.6);
+	padding: 10px;
+	text-align: center;
+	cursor: pointer;
+	transition: ease all 0.3s;
+}
+.prodVarSection .closeIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: ease all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.prodVarSection h2 {
+	font-size: 26px;
+	text-align: center;
+	color: #fff;
+	line-height: 1.2;
+	margin: 0 auto;
+	font-family: "Inter",sans-serif;
+	font-weight: 700;
+}
+.prodVarSection ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1em;
+	flex-wrap: wrap;
+}
+.prodVarSection .wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1.5em;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+.prodVarSection .buttonBlock .btn {
+	padding: 15px 20px;
+	line-height: 1;
+	font-size: 18px;
+	margin-top: 0;
+	background-color: #0ea8e6 !important;
+	opacity: 1 !important;
+	border-radius: 6px;
+	font-family: "Inter",sans-serif;
+	outline: 0 !important;
+    border: 0 !important;
+    background-image: none !important;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    font-weight: 700;
+    color: #fff;
+    text-decoration:none;
+    display:block;
+
+}
+.prodVarSection .buttonBlock .btn:hover{
+	background-color: #eb4630!important;
+	color: #fff !important;
+}
+.prodVarSection .buttonBlock li:last-child .btn {
+	background-color: #eb4630;
+}
+.prodVarSection .buttonBlock li:last-child .btn:hover {
+	background-color: #0ea8e6;
+}
+@media (max-width: 1023px) {
+	.prodVarSection h2 {
+		font-size: 22px;
+	}
+	.prodVarSection .buttonBlock .btn {
+		font-size: 16px;
+	}
+}

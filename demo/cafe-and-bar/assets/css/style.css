@@ -1,0 +1,1982 @@
+/*--------------------------------------------------------------
+    Theme Name: Cafe And Bar Template
+    Theme URL: https://www.ogwebsolutions.com/
+    Author: OG Websolutions Pvt. Ltd.
+    Version:  1.0
+--------------------------------------------------------------*/
+
+
+/**
+@File: Cafe And Bar Theme Styles
+This file contains the styling for the actual theme, this
+is the file you need to edit to change the look of the
+theme.
+
+# General Style
+    ## Google Font
+    ## Preloader
+    ## Back to top button
+    ## Typography
+# Header
+# Footer
+# Home Page
+	## Banner Section
+    ## Bar Section
+    ## Pub Section
+	## Host Section
+    ## Menu Section
+    ## Reviews Section
+    ## Ocassion Section
+    ## Brand Section
+# Upsell/Downsell Page
+# Order Page
+# Order confirmation(Thank you)/Order Cancelled Page
+# Privacy Policy &and Term & Conditions page
+
+**/
+
+
+/*--------------------------------------------------------------
+    # General
+--------------------------------------------------------------*/
+
+
+/* ----------------------------------
+    ## Google Font
+----------------------------------*/
+
+@import url('../../../../css2-14');
+@import url('../../../../css2-15');
+
+/* ----------------------------------
+    ## Prelaoder
+----------------------------------*/
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow: hidden;
+    background: #fff;
+}
+
+#preloader:before {
+    content: "";
+    position: fixed;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    border: 6px solid #f2f2f2;
+    border-top: 6px solid #1577da;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: animate-preloader 1s linear infinite;
+    animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate-preloader {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ----------------------------------
+    ## Back to top button
+----------------------------------*/
+
+.backtotop {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    height: 40px;
+    width: 40px;
+    background-color: #f4741f;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    opacity: 0.9;
+    transition: opacity 200ms linear;
+    display: none;
+}
+
+.backtotop::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -7px;
+    margin-top: -4px;
+    transform: rotate(-45deg);
+    height: 0px;
+    width: 0px;
+    border-width: 3px 3px 0 0;
+    border-style: solid;
+    padding: 5px;
+    border-color: #fff;
+}
+
+.backtotop:hover {
+    opacity: 1;
+    transition: opacity 200ms linear;
+}
+
+
+/* ----------------------------------
+    ## Typography
+----------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff;
+    color: #dee3e1;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+h1 span,
+h2 span,
+h3 span {
+    font-size: 20px;
+    display: block;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    color: #f4741f;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 991.98px) {
+    h2 span,
+    h3 span {
+        margin-bottom: 15px;
+    }
+}
+
+p {
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    
+}
+
+p:last-child {
+    margin-bottom: 0px;
+}
+
+dl,
+ol,
+ul {
+    margin-bottom: 0;
+    list-style: none;
+    padding-left: 0px;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    color: #3c3c3c;
+}
+
+a:hover,
+a:active,
+a:focus {
+    text-decoration: none;
+    outline: none;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+label {
+    font-weight: normal;
+}
+
+label.error {
+    color: #f00;
+    padding-left: 12px;
+    font-size: 14px;
+    padding-top: 5px;
+}
+
+.form-control {
+    height: auto;
+    padding: 15px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    color: #aaaaaa;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #d5d5d5;
+    margin-bottom: 20px;
+}
+
+.form-control.error {
+    border-color: #f00;
+}
+
+.form-select {
+    background-image: url(../icons/carrot-icon.png);
+    background-size: 10px 8px;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+
+ ::-webkit-input-placeholder {
+    opacity: 1;
+    color: #aaaaaa;
+}
+
+ :-moz-placeholder {
+    opacity: 1;
+    color: #aaaaaa;
+}
+
+ ::-moz-placeholder {
+    opacity: 1;
+    color: #aaaaaa;
+}
+
+ :-ms-input-placeholder {
+    opacity: 1;
+    color: #aaaaaa;
+}
+.w-100{
+    width: 100%;
+}
+
+/*========== Social Share ==========*/
+
+.social-share .fa {
+    padding: 10px 0px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 2px;
+    border-radius: 3px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.social-share .fa-twitter {
+    padding-left: 20px;
+}
+
+.social-share .fa:hover {
+    opacity: 0.8;
+}
+
+.social-share .fa-facebook {
+    color: #fff;
+}
+
+.social-share .fa-twitter {
+    color: #fff;
+}
+
+.social-share span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    padding-left: 5px;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+
+/*------ Font Weight ------*/
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.fw-900 {
+    font-weight: 900;
+}
+
+
+/*------ Custom Text Color ------*/
+
+.text-orange {
+    color: #f4741f;
+}
+
+.text-black {
+    color: #3c3c3c !important;
+}
+
+.text-yellow {
+    color: rgb(255, 187, 36);
+}
+
+
+/*------ Custom Background Color ------*/
+
+
+.bg-color-gray {
+    background-color: #f7f6f6;
+}
+
+.bg-color-ltgray {
+    background-color: #8a8a8a;
+}
+.bg-color-gray{
+    background-color:rgb(241, 241, 241);
+}
+
+/*------ Box Shadow ------*/
+
+.box-shadow {
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+/*------ Button Style ------*/
+
+.btn {
+    color: #fff !important;
+    font-weight: 600;
+    background-color: #f4741f !important;
+    font-size: 18px;
+    line-height: 0.5;
+    padding: 20px 30px;
+    text-align: center;
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 0px;
+    border:0px !important;
+}
+
+.btn:hover {
+    opacity: 0.8;
+    color: #fff;
+}
+
+.btn-check:focus+.btn,
+.btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+@media only screen and (max-width: 991.98px) {
+    .button {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .btn {
+        font-size: 15px;
+    }
+}
+
+
+/*------ image width ------*/
+
+@media only screen and (max-width: 1199px) {
+    .w-95 {
+        width: 95% !important;
+    }
+}
+
+
+/*------ Custom Container ------*/
+
+@media only screen and (min-width: 1400px) {
+    .container {
+        max-width: 1170px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .container {
+        max-width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+
+/*------ Section Spacer ------*/
+
+.sectionPadding {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+@media only screen and (max-width: 1199.98px) {
+    .sectionPadding {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+
+/*------ Section Title ------*/
+
+.section-title {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.section-title h2 {
+    font-size: 50px;
+    line-height: 1.3;
+    text-transform: normal;
+}
+
+.section-title p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 1199.98px) {
+    .section-title h2 {
+        font-size: 42px;
+    }
+    .section-title p {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .section-title {
+        text-align: center;
+    }
+    .section-title h2 {
+        font-size: 35px;
+    }
+    .section-title p {
+        margin-bottom: 25px !important;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    .section-title h2 {
+        font-size: 35px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+header {
+    padding: 0px 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: transparent;
+}
+
+header.fixed {
+    background-color: #8A8A8A;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+header p{
+    font-size: 20px;
+}
+header .headerLogo {
+    width: 170px;
+}
+
+header .mail a {
+    color: #fff;
+    position: relative;
+}
+
+header .email {
+    padding-right: 5px;
+}
+
+header .mail a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 767px) {
+    header .headerLogo {
+        width: 165px;
+    }
+    header .mail {
+        margin-top: 5px !important;
+    }
+    header .rightBlock p{
+        margin-top: 0px !important;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+footer {
+    padding: 0px 0 30px;
+    background-color: #1b1b1b;
+}
+
+footer .footer {
+    background-color: #1b1b1b;
+    padding: 30px 0 20px;
+}
+footer .copyright {
+    font-size: 14px;
+}
+footer .social-share {
+    display: contents;
+}
+
+footer .social-icons {
+    margin-top: 10px;
+}
+
+footer .footer-menu .list-inline-item {
+    line-height: 1;
+}
+
+footer .footer-menu .list-inline-item a {
+    font-size: 15px;
+    line-height: 1;
+    color: #fff;
+    display: inline-block;
+}
+
+footer .footer-menu .list-inline-item a:hover {
+    text-decoration: underline;
+}
+
+footer .footer-menu .list-inline-item:not(:last-child) {
+    border-right: 1px solid #fff;
+    padding-right: 10px;
+    margin-right: 10px;
+}
+
+footer .footer-menu ul li {
+    font-size: 15px;
+    color: #fff;
+}
+
+@media only screen and (max-width: 767px) {
+    footer .footer-menu .list-inline-item a {
+        font-size: 14px;
+    }
+    
+}
+
+@media only screen and (max-width: 576.98px) {
+    .footer-menu {
+        text-align: center;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Home Page
+--------------------------------------------------------------*/
+
+
+/* ----------------------------------
+    ## Banner Section
+----------------------------------*/
+
+.bannerSection {
+    background: url(../images/cafe-bar-banner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 200px;
+    padding-bottom: 155px;
+    /*background-attachment: fixed;*/
+}
+
+.bannerSection h1 {
+    font-size: 60px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+}
+
+.bannerSection p {
+    font-size: 20px;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+    color:#fff;
+}
+h1 span{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+@media only screen and (max-width: 1199.98px) {
+    .bannerSection {
+        padding-top: 150px;
+        padding-bottom: 100px;
+    }
+    .bannerSection h1 {
+        font-size: 55px;
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .bannerSection {
+        padding-bottom: 80px;
+    }
+    .bannerSection h1 {
+        font-size: 50px;
+    }
+    .bannerSection p {
+        font-size: 17px;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    .bannerSection {
+        padding-top: 165px;
+    }
+    .bannerSection h1 {
+        font-size: 35px;
+    }
+    .bannerSection p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .bannerSection {
+        padding-top: 160px;
+        padding-bottom: 85px;
+    }
+
+}
+
+/* ----------------------------------
+    ## Bar Section
+----------------------------------*/
+.barSection .btn{
+    background-color: transparent !important;
+    border: 2px solid #3c3c3c !important;;
+    color: #3c3c3c !important;;
+}
+@media only screen and (max-width: 991.98px) {
+    .barSection .bar-img{
+        text-align: center;
+    }
+    .meetSection .right-col {
+        width: 100%;
+        padding-top: 30px;
+        padding-bottom: 60px;
+        padding-right: 100px;
+        padding-left: 100px;
+    }
+}
+@media only screen and (max-width: 575.98px) {
+    .bar-img img{
+        width: 100%;
+    }
+}
+/* ----------------------------------
+    ## Meet Section
+----------------------------------*/
+.meetSection .container{
+    max-width: 100%;
+    padding: 0px;
+}
+.meetSection .right-col{
+    display: flex;
+    align-items: center;
+    padding-left: 112px;
+    padding-right: 112px;
+}
+.meetSection{
+    background-color: rgb(255, 247, 241);
+}
+.meetSection .left-col img{width: 100%;}
+.meetSection ul li{
+    display: inline-block;
+}
+.meetSection ul li:nth-child(2){
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media only screen and (max-width:1499px){
+    .meetSection .left-col{
+        width: 100%;
+    }
+    .meetSection .right-col{
+        width: 100%;
+        padding-top:50px;
+        padding-bottom: 69px;
+        padding-right: 140px;
+        padding-left: 140px;
+    }
+}
+@media only screen and (max-width: 991.98px) {
+    .meetSection .right-col {
+        width: 100%;
+        padding-top: 30px;
+        padding-bottom: 60px;
+        padding-right: 100px;
+        padding-left: 100px;
+    }
+}
+@media only screen and (max-width: 991.98px){
+    .meetSection .right-col {
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+}
+
+/* ----------------------------------
+    ## Pub Section
+----------------------------------*/
+.pubSection .section-title h2{
+    font-size: 42px;
+}
+
+.pubSection ul li {
+    position: relative;
+    padding-left: 40px;
+}
+.pubSection ul li:not(:last-child) {
+    margin-bottom: 15px;
+}
+.pubSection ul li::before{
+    content: url('../icons/circle-cafe.png');
+	position: absolute;
+	left: 0;
+	top: 0;
+
+}
+.pubSection ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+  }
+  
+@media only screen and (max-width:991.98px) {
+    .pubSection ul li{
+        text-align: left;
+    }
+    .pubSection ul{
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    .pubSection .menu-img{
+       text-align: center;
+       margin-top: 30px;
+    }
+}
+@media only screen and (max-width:767.98px){
+    .pubSection .section-title h2{
+        font-size: 35px;
+    }
+}
+@media only screen and (max-width:575.98px){
+    .pubSection .menu-img img{
+        width: 100%;
+    }
+    .pubSection ul li{
+        font-size: 15px;
+        padding-left: 34px;
+    }
+}
+
+/* ----------------------------------
+    ## Host Section
+----------------------------------*/
+.hostSection.bannerSection{
+    background: url(../images/cafe-venue-banner.jpg);
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.hostSection p{
+    font-size: 18px;
+}
+
+.hostSection .btn{
+    background-color: transparent;
+    border: 2px solid #f4741f;
+    color: #f4741f
+}
+
+@media only screen and (max-width: 991.98px) {
+} 
+
+/* ----------------------------------
+    ## Menu Section
+----------------------------------*/
+
+@media only screen and (max-width: 1199.98px) {
+    .menuSection h2 {
+        margin-top: 0px !important;
+    }
+    /*.menuSection img {
+        width: 100%;
+    }*/
+}
+
+@media only screen and (max-width: 991.98px) {
+    
+    .menuSection .menu-img {
+        text-align: center;
+    }
+    .menuSection h2 {
+        margin-top: 20px !important;
+    }
+}
+@media only screen and (max-width:575.98px){
+    .menuSection img {
+        width: 100%;
+    }
+}
+
+/* ----------------------------------
+    ## Reviews Section
+----------------------------------*/
+.reviewsSection h2 {
+    font-size: 52px;
+}
+
+.reviewsSection p {
+    font-size: 18px;
+}
+
+.reviewsSection .card-parent {
+    padding: 30px;
+    border: 2px solid #3c3c3c;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reviewsSection .card .fivestar {
+    max-width: 107px;
+}
+
+.reviewsSection .card-text {
+    font-size: 16px;
+    line-height: 1.1;
+}
+
+.reviewsSection h5 {
+    font-size: 14px;
+    line-height: 1;
+}
+
+.reviewsSection .left-image img {
+    border-radius: 50%;
+    width: 100px;
+}
+
+.reviewsSection .rating-row h2 {
+    font-size: 48px;
+}
+
+.reviewsSection .rating-row p {
+    font-size: 16px;
+}
+
+.reviewsSection .fa {
+    font-size: 48px;
+    color: #f4741f;
+    font-weight: 500;
+}
+
+.reviewsSection .fa-facebook {
+    color: #000;
+    background-color: #f4741f;
+}
+
+@media only screen and (max-width: 1199.98px) {
+    .reviewsSection h2 {
+        font-size: 45px;
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .reviewsSection h2 {
+        font-size: 40px;
+    }
+    .reviewsSection .card-parent {
+        padding: 15px;
+    }
+    .reviewsSection .card-text {
+        margin-top: 0px !important;
+    }
+    .reviewsSection .fivestar {
+        margin-bottom: 0px !important;
+    }
+    .reviewsSection p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    .reviewsSection h2 {
+        font-size: 35px;
+    }
+    .reviewsSection p {
+        font-size: 16px;
+    }
+    .reviewsSection .rating-row .col-12{
+        width: 50%  !important;
+    }
+}
+
+@media only screen and (max-width:575.98px) {
+    .reviewsSection h2 {
+        font-size: 30px;
+    }
+    .reviewsSection .card-text {
+        font-size: 15px;
+    }
+}
+
+
+/* ----------------------------------
+    ## Ocassion Section
+----------------------------------*/
+.ocassionSection.bannerSection{
+    background:url(../images/bg-full.jpg);
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.ocassionSection .section-title h2 {
+    font-size: 52px;
+}
+
+.ocassionSection p {
+    font-size: 18px;
+}
+
+.ocassionSection h3 {
+    font-size: 40px;
+}
+
+@media only screen and (max-width: 1199.98px) {
+    .ocassionSection .section-title h2 {
+        font-size: 45px;
+        margin-top: 0px !important;
+    }
+    .ocassionSection h3 {
+        margin-top: 0px !important;
+    }
+    /*.ocassionSection img {
+        width: 100%;
+    }*/
+}
+
+@media only screen and (max-width: 991.98px) {
+    .ocassionSection .section-title h2 {
+        font-size: 40px;
+    }
+    /*.ocassionSection img {
+        width: 78%;
+    }*/
+    .ocassionSection .row {
+        text-align: center;
+    }
+    .ocassionSection h3 {
+        margin-top: 20px !important;
+    }
+    .ocassionSection .pool-row .title h3 {
+        margin-top: 35px !important;
+    }
+    .ocassionSection .pool-row .menu-img {
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    .ocassionSection .section-title h2 {
+        font-size: 30px;
+    }
+    .ocassionSection h3 {
+        font-size: 35px;
+    }
+    .ocassionSection p {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width:575.98px) {
+    .ocassionSection h3 {
+        font-size: 30px;
+    }
+    .ocassionSection img{
+        width: 100%;
+    }
+}
+
+
+/* ----------------------------------
+    ## Brand Section
+----------------------------------*/
+
+.brandSection {
+    background: url(../images/cafe-last-banner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 110px;
+    padding-bottom: 120px;
+    background-attachment: fixed;
+}
+
+.brandSection h2 {
+    font-size: 64px;
+}
+
+.brandSection h3 {
+    font-size: 36px;
+}
+
+.brandSection p {
+    font-size: 16px;
+}
+
+.brandSection .fa {
+    font-size: 55px;
+    color: #fff;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 1199.98px) {
+    .brandSection h2 {
+        font-size: 50px;
+    }
+    .brandSection h3 {
+        font-size: 28px;
+    }
+    .brandSection {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .brandSection {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .brandSection h2 {
+        font-size: 34px;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    .brandSection h2 {
+        font-size: 40px;
+    }
+    .brandSection h3 {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width:575.98px) {
+    .brandSection h2 {
+        font-size: 30px;
+    }
+    .brandSection h3 {
+        font-size: 20px;
+    }
+}
+
+
+/* ----------------------------------
+    ## Modal/Popup Style
+----------------------------------*/
+
+.modal-lg {
+    max-width: 650px !important;
+}
+
+.modal-body {
+    padding: 40px 35px 40px;
+}
+
+.modal .btn-close {
+    position: absolute;
+    z-index: 1155;
+    top: 5px;
+    right: 5px;
+}
+
+.modal-body h2 {
+    font-size: 40px;
+}
+
+.modal-body p a:hover {
+    text-decoration: underline;
+}
+
+.modal-body h3 {
+    font-size: 18px;
+}
+
+.modal-body P {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.modal-body .title {
+    font-size: 20px;
+}
+
+.modal-bottom p {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+@media only screen and (max-width: 767.98px) {
+    .form-control {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .modal-body h2 {
+        font-size: 28px;
+    }
+    .modal-body h3 {
+        font-size: 16px;
+    }
+    .modal-body P {
+        font-size: 12px;
+    }
+    .form-control {
+        font-size: 13px;
+    }
+    .modal-body .title {
+        font-size: 16px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Upsell/Downsell Page
+--------------------------------------------------------------*/
+
+.upsell p {
+    color: #fff;
+}
+
+.upsell .bannerSection,
+.downsell .bannerSection {
+    padding-top: 140px;
+    padding-bottom: 100px;
+}
+
+.upsell h1,
+.downsell h1 {
+    font-size: 55px;
+}
+
+.upsell .bannerSection p,
+.downsell .bannerSection p {
+    font-size: 20px;
+}
+
+.upsell .offerSection h3,
+.downsell .offerSection h3 {
+    font-size: 50px;
+    border: 2px dashed;
+    width: 45%;
+    margin: 0 auto;
+}
+
+.upsell .offerSection .section-title p::before,
+/*.downsell .offersSection .section-title p::before {
+    content: '';
+    display: block;
+    position: relative;
+    border-bottom: 3px solid #1b1b1b;
+    width: 32%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}*/
+
+.upsell .section-title h2 span,
+.downsell .section-title h2 span,
+.upsell .section-title h3 span,
+.downsell .section-title h3 span {
+    font-size: 50px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.2;
+    font-weight: 700;
+    display: inline;
+}
+
+.upsell .offerSection .section-title p,
+.downsell .offerSection .section-title p {
+    font-size: 24px;
+}
+
+.upsell .offerSection .section-title h4 {
+    font-size: 26px;
+}
+
+.offerSection .superp-row {
+    border: 2px solid rgb(71 71 71 / 60%);
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 15px 15px;
+    box-shadow: 0 2px 5px 2px rgba(0,0,0,0.4);
+}
+
+.offerSection .offer-img img{
+    border: 3px solid #FFF;
+    box-shadow: 0 2px 5px 2px rgba(0,0,0,0.4);
+}
+.offerSection .left-block {
+    padding: 20px 25px;
+}
+
+.offerSection .detail {
+    border: 2px solid #fff;
+    padding: 0px 0px;
+}
+
+.offerSection .superb-row .left-block h2 {
+    font-size: 48px;
+}
+
+.upsell .offerSection .superb-row .left-block h4 {
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.upsell .offerSection .superp-row .title h2 {
+    font-size: 34px;
+}
+
+.upsell .title h2 span {
+    font-size: 34px;
+    color: rgb(255, 187, 36);
+    display: inline;
+    font-weight: 600;
+}
+
+.upsell .reviewsSection {
+    padding-top: 80px;
+}
+
+.upsell .brandSection {
+    padding-top: 80px;
+}
+
+.bottom-btn .btn {
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 0%;
+    text-transform: capitalize;
+    padding: 16px 35px;
+}
+
+.bottom-btn .btn .fa {
+    padding-right: 10px;
+}
+
+.bottom-btn a:hover {
+    background-color: #ffffff;
+    color: #000;
+}
+
+@media only screen and (max-width: 1199.98px) {
+    .upsell h1,
+    .downsell h1 {
+        font-size: 50px;
+    }
+    .upsell .section-title h2 span,
+    .downsell .section-title h2 span,
+    .upsell .section-title h3 span,
+    .downsell .section-title h3 span {
+        font-size: 42px;
+    }
+    .upsell .offerSection h3,
+    .downell .offerSection h3 {
+        font-size: 42px;
+    }
+    .button .btn {
+        padding: 20px 20px;
+    }
+    .upsell .reviewsSection {
+        padding-top: 60px;
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .upsell h1,
+    .downsell h1 {
+        font-size: 45px;
+    }
+    .upsell .bannerSection p,
+    .downsell .bannerSection p {
+        font-size: 18px;
+    }
+    .upsell .offerSection h3,
+    .downell .offerSection h3 {
+        font-size: 35px;
+    }
+    .upsell .offerSection h3,
+    .downell .offerSection h3 {
+        width: 54%;
+    }
+    .upsell .offerSection .section-title p,
+    .downsell .offerSection .section-title p {
+        font-size: 18px;
+    }
+    .upsell .offerSection .section-title h4 {
+        font-size: 20px;
+    }
+    .upsell .superb-row .right-block {
+        text-align: center;
+    }
+    .upsell .offerSection .superp-row .title h2,
+    .upsell .offerSection .superp-row .title p {
+        text-align: center;
+    }
+    .upsell .left-block {
+        width: 50%;
+        margin: 0 auto;
+    }
+    .upsell .section-title h2 span,
+    .downsell .section-title h2 span,
+    .upsell .section-title h3 span,
+    .downsell .section-title h3 span {
+        font-size: 35px;
+    }
+    .upsell .brandSection {
+        padding-top: 80px;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    .upsell h1,
+    .downsell h1 {
+        font-size: 34px;
+    }
+    .upsell .bannerSection p,
+    .downsell .bannerSection p {
+        font-size: 16px;
+    }
+    .upsell .offerSection .section-title h2 {
+        font-size: 28px;
+    }
+    .upsell .offerSection h3,
+    .downsell .offerSection h3 {
+        font-size: 28px;
+    }
+    .upsell .brandSection {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .upsell .section-title h2 span,
+    .downsell .section-title h2 span,
+    .upsell .section-title h3 span,
+    .downsell .section-title h3 span {
+        font-size: 28px;
+    }
+    .upsell .offerSection .section-title h4 {
+        font-size: 18px;
+    }
+    .button .btn {
+        line-height: 1.2;
+    }
+    .upsell .offerSection .section-title p,
+    .downsell .offerSection .section-title p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .upsell .offerSection h3,
+    .downsell .offerSection h3 {
+        width: 75%;
+    }
+    .upsell .bannerSection,
+    .downsell .bannerSection {
+        padding-top: 120px;
+        padding-bottom: 70px;
+    }
+    .upsell h1,
+    .downsell h1 {
+        font-size: 30px;
+    }
+    .upsell .bannerSection p,
+    .downsell .bannerSection p {
+        font-size: 16px;
+    }
+    .upsell .offerSection .superp-row .title h2,
+    .downsell .offerSection .superp-row .title h2 {
+        font-size: 22px;
+    }
+    .offerSection .superp-row {
+        width: 95%;
+    }
+
+    .price-details p {
+        font-size: 15px;
+    }
+    .upsell .title h2 span {
+        font-size: 22px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Order Page
+--------------------------------------------------------------*/
+
+
+/* ----------------------------------
+## Order Section
+----------------------------------*/
+
+.order-page .bannerSection {
+    padding-top: 140px;
+    padding-bottom: 100px;
+}
+
+.order-page .bannerSection h1 {
+    font-size: 55px;
+    line-height: 1.3;
+}
+
+.order-page .bannerSection p {
+    font-size: 20px;
+    color: #fff;
+}
+
+.formcontentSec {
+    border-radius: 10px;
+    border: 1px solid #d9d9d9;
+    max-width: 1010px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    background: #e7e7e7;
+    -webkit-box-shadow: 0 1px 5px rgb(0 0 0 / 20%);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 5px rgb(0 0 0 / 20%);
+}
+
+.formcontentSec .form-status {
+    margin-top: 40px;
+    display: none;
+}
+
+.your_productlist {
+    background: #fff;
+    padding: 15px;
+    float: left;
+    width: 100%;
+    border: 1px solid #d9d9d9;
+    margin-bottom: 30px;
+}
+
+.order_Section .left-col .your_productlist ul {
+    margin: 10px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.order_Section .left-col .your_productlist li {
+    background: none;
+    float: left;
+    width: 100%;
+    font-size: 14px;
+    color: #757575;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.order_Section .left-col .your_productlist li:not(:last-child) {
+    border-bottom: 1px solid #b0d2de;
+    padding: 0 0 20px;
+    margin: 0 0 20px;
+}
+
+.order_Section .left-col .your_productlist li:first-child,
+.order_Section .left-col .your_productlist li:last-child {
+    color: #000;
+    font-size: 15px;
+}
+
+.order_Section .left-col .your_productlist li:last-child {
+    font-size: 18px;
+    padding-left: 0;
+}
+
+.order_Section .left-col .your_productlist li .pull-left {
+    float: left;
+}
+
+.order_Section .left-col .your_productlist li .pull-right {
+    float: right;
+}
+
+.order_Section h2.headingsec {
+    color: #3c3c3c;
+    font-size: 20px;
+    line-height: 30px;
+    border-bottom: 2px dotted #c7c7c7;
+    padding: 0 0 20px;
+    margin: 0 0 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.order_Section .btn-outer {
+    text-align: center;
+}
+
+.declaration p {
+    font-size: 14px;
+    color: #9b9b9b;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0 15px;
+}
+
+.order_Section .cards {
+    text-align: center;
+}
+
+.order_Section .cards img {
+    display: inline-block;
+}
+
+.order_Section .pay-btn.btn {
+    font-size: 18px;
+    padding: 20px 120px;
+    border-radius: 5px;
+    line-height: 1.2;
+}
+
+@media only screen and (max-width: 1199.98px) {
+    .order_Section .pay-btn.btn {
+        padding: 25px 125px;
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .order-page .bannerSection h1 {
+        font-size: 45px;
+    }
+    .order-page .bannerSection p {
+        font-size: 18px;
+    }
+    .order_Section h2.headingsec {
+        color: #3c3c3c;
+        font-size: 18px;
+    }
+    .order_Section .container {
+        max-width: 720px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .order-page .bannerSection h1 {
+        font-size: 34px;
+    }
+    .order-page .bannerSection p {
+        font-size: 16px;
+    }
+    .formcontentSec {
+        padding: 25px;
+    }
+    .order_Section h2.headingsec {
+        font-size: 18px;
+    }
+    .order_Section .left-col .your_productlist li {
+        font-size: 12px;
+    }
+    .order_Section .left-col .your_productlist li:first-child,
+    .order_Section .left-col .your_productlist li:last-child {
+        font-size: 14px;
+    }
+    .declaration p {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .order-page .bannerSection {
+        padding-top: 110px;
+        padding-bottom: 60px;
+    }
+    .order_Section .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .order-page .bannerSection h1 {
+        font-size: 30px;
+    }
+    .order_Section .pay-btn.btn {
+        font-size: 16px;
+        padding: 18px 35px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Order confirmation(Thank you)/Order Cancelled Page
+--------------------------------------------------------------*/
+
+.order-cancelled .bannerSection,
+.thank-you .bannerSection {
+    padding-top: 140px;
+    padding-bottom: 90px;
+}
+
+.order-cancelled .bannerSection p,
+.thank-you .bannerSection p {
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 767.98px) {
+    .order-cancelled .bannerSection,
+    .thank-you .bannerSection {
+        padding-top: 128px;
+        padding-bottom: 5px;
+    }
+    .order-cancelled .bannerSection p,
+    .thank-you .bannerSection p {
+        font-size: 16px;
+    }
+}
+
+
+/* ----------------------------------
+    ## Thank You Content Section
+----------------------------------*/
+
+.thank-you .bannerSection h1 {
+    font-size: 75px;
+}
+
+.thank-you .bannerSection p {
+    font-size: 20px;
+}
+
+.thankyouContentSec p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+footer.border-white {
+    border-top: 3px solid #3c3c3c;
+}
+
+@media only screen and (max-width: 1199.98px) {
+    .thank-you .bannerSection h1 {
+        font-size: 55px;
+    }
+    .thankyouContentSec p {
+        font-size: 19px;
+        line-height: 1.5;
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .thank-you .bannerSection h1 {
+        font-size: 45px;
+    }
+    .thank-you .bannerSection p {
+        font-size: 18px;
+    }
+    .thankyouContentSec p {
+        font-size: 18px;
+    }
+    .facebook-logo {
+        text-align: center;
+    }
+    .facebook-logo img {
+        width: 260px;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {}
+
+@media only screen and (max-width: 575.98px) {
+    .thank-you .bannerSection h1 {
+        font-size: 38px;
+    }
+    .thank-you .bannerSection p {
+        font-size: 16px;
+    }
+    .thankyouContentSec p {
+        font-size: 16px;
+    }
+    .thank-youSection .fb-logo img {
+        width: 70%;
+    }
+}
+
+
+/*--------------------------------------------------------------
+#  Privacy Policy and Term & Conditions page
+--------------------------------------------------------------*/
+
+.termcond_privacypilocy h1 {
+    font-size: 55px;
+}
+
+.privacypolicyterms h2 {
+    font-size: 40px;
+}
+
+.privacypolicyterms h3 {
+    font-size: 24px;
+}
+
+.privacypolicyterms h4 {
+    font-size: 22px;
+}
+
+.privacypolicyterms p {
+    font-size: 18px;
+}
+
+.privacypolicyterms p a {
+    color: #1577da;
+}
+
+.privacypolicyterms li {
+    font-size: 18px;
+}
+
+.privacypolicyterms .highlight {
+    font-weight: 500;
+}
+
+.privacypolicyterms p,
+.privacypolicyterms li,
+.privacypolicyterms h2,
+.privacypolicyterms h3,
+.privacypolicyterms h4 {
+    font-weight: 500;
+}
+
+.termcond_privacypilocy {
+    padding-top: 140px;
+    padding-bottom: 90px;
+}
+
+.termcond_privacypilocy .section-title {
+    padding-bottom: 0;
+}
+
+@media only screen and (max-width: 991.99px) {
+    .termcond_privacypilocy h1 {
+        font-size: 45px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .termcond_privacypilocy {
+        padding-top: 128px;
+        padding-bottom: 75px;
+    }
+    .privacypolicyterms h2 {
+        font-size: 28px;
+    }
+    .privacypolicyterms h3 {
+        font-size: 22px;
+    }
+    .privacypolicyterms h4 {
+        font-size: 20px;
+    }
+    .privacypolicyterms p,
+    .privacypolicyterms li {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 576.98px) {
+    .termcond_privacypilocy {
+        padding-top: 110px;
+        padding-bottom: 45px;
+    }
+    .termcond_privacypilocy h1 {
+        font-size: 35px;
+    }
+}
+
+
+/* stripe card */
+.payment-outer{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 22px 15px 5px;
+    background-color: #e9e9e9;
+    position: relative;
+    margin-top:10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.payment-outer:before{
+    content: "";
+    position: absolute;
+    left: 35px;
+	top: -8px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #e9e9e9;
+}
+.payment-outer .form-group{
+    width: 33.33%;
+    padding: 0 7px;
+}
+.payment-outer .form-group.card-number-group{
+    width: 100%;
+}
+.payment-outer .form-group #card_number{
+    background-image: url('../icons/cards.png');
+    background-repeat: no-repeat;
+    background-size: 120px;
+    background-position: right 10px center;
+    padding-right: 140px;
+}
+.paypal-card-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom:15px;
+}
+.paypal-card-group label{
+    color: #3c3c3c;
+}
+.paypal-card-group label:first-child{
+    margin-bottom: 10px;
+}
+.form-group.btn-outer{
+    position: relative;
+}
+.form-group.btn-outer #loader{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+	border-radius: 5px;
+}
+form #loader img{
+    width: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+@media only screen and (max-width: 390px) {
+    .payment-outer{
+   	 padding: 15px 10px 0px;
+    }
+    .payment-outer .form-group #card_number{
+   	 padding-right: 100px;
+   	 background-size: 80px;
+    }
+    form select{
+   	 background-size: 12px;
+    }
+}
+/* stripe card end */
